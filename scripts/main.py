@@ -1,5 +1,6 @@
 import os
 import re
+import sys
 import frida
 import struct
 
@@ -19,7 +20,6 @@ def run():
         data = f.read()
     script = session.create_script(data)
     script.load()
-
 
     def int2hex(value):
         hexed = list(struct.pack("<I", value).hex())

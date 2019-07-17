@@ -12,7 +12,7 @@ with open("README.rst", "r") as fh:
 setuptools.setup(
     name="apk-cheater",
     python_requires='>=3',
-    version="0.0.2",
+    version="0.0.7",
     author="ksg97031",
     author_email="ksg97031@gmail.com",
     description="Easy to use frida gadget",
@@ -21,14 +21,12 @@ setuptools.setup(
     long_description_content_type="text/x-rst",
     url="https://github.com/ksg97031/apk-cheater",
     packages=setuptools.find_packages(),
+    package_data={'scripts': ["loader.js"]},
     entry_points={
         'console_scripts': [
             'apk-cheater = scripts.main:run'
         ],
     },
-    package_data={'scripts':
-    ["loader.js"]},
-    include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

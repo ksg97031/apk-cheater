@@ -1,5 +1,7 @@
 'use strict';
 
+console.log("apk-cheater hi");
+
 var scan_address = [1,2];
 rpc.exports = {
 	scan: function(pattern) {
